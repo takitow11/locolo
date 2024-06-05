@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirection</title>
+</head>
+<body>
+  <script>
+    var userAgent = navigator.userAgent;
+    var isAndroid = /android/i.test(userAgent);
+    var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+    if (!isAndroid && !isIOS) {
+      window.location.href = "error404.html";
+    } else {
+      window.location.href = "3D/index.html";
+    }
+  </script>
+</body>
+</html>
